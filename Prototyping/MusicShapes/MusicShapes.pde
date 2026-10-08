@@ -2,7 +2,7 @@ fullScreen();
 int appWidth = displayWidth;
 int appHeight = displayHeight;
 //
-int numberOfButtons = 12; 
+int numberOfButtons = 13; 
 int widthOfButton = appWidth/numberOfButtons;
 int beginningButtonSpace = widthOfButton;
 int buttonY = appHeight*3/5;
@@ -18,7 +18,6 @@ float[] musicButtonDivX = new float[numberOfButtons-2];
 //
 for (int i=0; i<numberOfButtons-2; i++) 
  musicButtonDivX[i] = beginningButtonSpace + musicButtonDivDimension*i;
-//
 for (int i=0; i<numberOfButtons-2; i++) 
   square(musicButtonDivX[i], musicButtonDivY, musicButtonDivDimension);
 //
@@ -28,8 +27,8 @@ float randomStartButtonX = randomStartDIV_X + randomStartDIV_Dimesion*1/4;
 float randomStartButtonY = randomStartDIV_Y + randomStartDIV_Dimesion*1/4;
 float randomStartButtonDimension = randomStartDIV_Dimesion*1/2;
 //
-float stopButtonX = musicButtonDivX[0] + musicButtonDivDimension*1/4; 
-float stopButtonY = musicButtonDivY + musicButtonDivDimension*1/4; //
+float stopButtonX = musicButtonDivX[6] + musicButtonDivDimension*1/4;
+float stopButtonY = musicButtonDivY + musicButtonDivDimension*1/4; 
 float stopButtonDimension = widthOfButton*1/2;
 //
 float muteButtonX = musicButtonDivX[1] + musicButtonDivDimension*1/4;
@@ -87,12 +86,12 @@ float playY3 = musicButtonDivY + musicButtonDivDimension*3/4;
 //Loop Once Button, #6
 //Note, this is a stop botton with a "one inside" & a triangle
 //CAUTION: this needs text
-float loopOnceX = musicButtonDivX[6] + musicButtonDivDimension*1/4;
+float loopOnceX = musicButtonDivX[0] + musicButtonDivDimension*1/4;
 float loopOnceY = musicButtonDivY + musicButtonDivDimension*1/4;
 float loopOnceDimension = musicButtonDivDimension*1/2;
-float loopOnceX1 = musicButtonDivX[6] + musicButtonDivDimension*3/4 - musicButtonDivDimension*1/16;
+float loopOnceX1 = musicButtonDivX[0] + musicButtonDivDimension*3/4 - musicButtonDivDimension*1/16;
 float loopOnceY1 = musicButtonDivY + musicButtonDivDimension*1/4 - musicButtonDivDimension*1/16;
-float loopOnceX2 = musicButtonDivX[6] + musicButtonDivDimension*3/4 + musicButtonDivDimension*1/16;
+float loopOnceX2 = musicButtonDivX[0] + musicButtonDivDimension*3/4 + musicButtonDivDimension*1/16;
 float loopOnceY2 = musicButtonDivY + musicButtonDivDimension*1/4;
 float loopOnceX3 = loopOnceX1;
 float loopOnceY3 = musicButtonDivY + musicButtonDivDimension*1/4 + musicButtonDivDimension*1/16;
