@@ -27,9 +27,18 @@ float randomStartButtonX = randomStartDIV_X + randomStartDIV_Dimesion*1/4;
 float randomStartButtonY = randomStartDIV_Y + randomStartDIV_Dimesion*1/4;
 float randomStartButtonDimension = randomStartDIV_Dimesion*1/2;
 //
-float stopButtonX = musicButtonDivX[6] + musicButtonDivDimension*1/4;
-float stopButtonY = musicButtonDivY + musicButtonDivDimension*1/4; 
-float stopButtonDimension = widthOfButton*1/2;
+float loopOnceX = musicButtonDivX[0] + musicButtonDivDimension*1/4;
+float loopOnceY = musicButtonDivY + musicButtonDivDimension*1/4;
+float loopOnceDimension = musicButtonDivDimension*1/2;
+float loopOnceX1 = musicButtonDivX[0] + musicButtonDivDimension*3/4 - musicButtonDivDimension*1/16;
+float loopOnceY1 = musicButtonDivY + musicButtonDivDimension*1/4 - musicButtonDivDimension*1/16;
+float loopOnceX2 = musicButtonDivX[0] + musicButtonDivDimension*3/4 + musicButtonDivDimension*1/16;
+float loopOnceY2 = musicButtonDivY + musicButtonDivDimension*1/4;
+float loopOnceX3 = loopOnceX1;
+float loopOnceY3 = musicButtonDivY + musicButtonDivDimension*1/4 + musicButtonDivDimension*1/16;
+float loopOnceStrNumX = musicButtonDivX[6] + musicButtonDivDimension*3/8 ;
+float loopOnceStrNumY = musicButtonDivY + musicButtonDivDimension*3/8;
+float loopOnceStrNumDimension = musicButtonDivDimension*1/4;
 //
 float muteButtonX = musicButtonDivX[1] + musicButtonDivDimension*1/4;
 float muteButtonY = musicButtonDivY + musicButtonDivDimension*1/4;
@@ -86,18 +95,9 @@ float playY3 = musicButtonDivY + musicButtonDivDimension*3/4;
 //Loop Once Button, #6
 //Note, this is a stop botton with a "one inside" & a triangle
 //CAUTION: this needs text
-float loopOnceX = musicButtonDivX[0] + musicButtonDivDimension*1/4;
-float loopOnceY = musicButtonDivY + musicButtonDivDimension*1/4;
-float loopOnceDimension = musicButtonDivDimension*1/2;
-float loopOnceX1 = musicButtonDivX[0] + musicButtonDivDimension*3/4 - musicButtonDivDimension*1/16;
-float loopOnceY1 = musicButtonDivY + musicButtonDivDimension*1/4 - musicButtonDivDimension*1/16;
-float loopOnceX2 = musicButtonDivX[0] + musicButtonDivDimension*3/4 + musicButtonDivDimension*1/16;
-float loopOnceY2 = musicButtonDivY + musicButtonDivDimension*1/4;
-float loopOnceX3 = loopOnceX1;
-float loopOnceY3 = musicButtonDivY + musicButtonDivDimension*1/4 + musicButtonDivDimension*1/16;
-float loopOnceStrNumX = musicButtonDivX[6] + musicButtonDivDimension*3/8 ;
-float loopOnceStrNumY = musicButtonDivY + musicButtonDivDimension*3/8;
-float loopOnceStrNumDimension = musicButtonDivDimension*1/4;
+float stopButtonX = musicButtonDivX[6] + musicButtonDivDimension*1/4;
+float stopButtonY = musicButtonDivY + musicButtonDivDimension*1/4; 
+float stopButtonDimension = widthOfButton*1/2;
 //
 //Loop Infinite Button, #7
 //Note: Loop infinite button is same as loop once, without text "1"
@@ -165,19 +165,17 @@ square(muteButtonX, muteButtonY, muteButtonDimension);
 line(muteButtonCross1X1, muteButtonCross1Y1, muteButtonCross1X2, muteButtonCross1Y2);
 line(muteButtonCross2X1, muteButtonCross2Y1, muteButtonCross2X2, muteButtonCross2Y2);
 rect(prevX, prevY, prevWidth, prevHeight);
-triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3); //Triangle is pointed the opposite of PLAY & 1/2 of DIV
-triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);  //Triangle is pointed the opposite of PLAY & 1/2 of DIV
+triangle(prevX1, prevY1, prevX2, prevY2, prevX3, prevY3); 
+triangle(fastRewindX1, fastRewindY1, fastRewindX2, fastRewindY2, fastRewindX3, fastRewindY3);  
 triangle(fastRewindX4, fastRewindY4, fastRewindX5, fastRewindY5, fastRewindX6, fastRewindY6);
 rect(pauseX1, pauseY1, pauseWidth1, pauseHeight1);
 rect(pauseX2, pauseY2, pauseWidth2, pauseHeight2);
 triangle(playX1, playY1, playX2, playY2, playX3, playY3);
 square(loopOnceX, loopOnceY, loopOnceDimension);
 triangle(loopOnceX1, loopOnceY1, loopOnceX2, loopOnceY2, loopOnceX3, loopOnceY3);
-//Note: Loop Once button has "1"
 square(loopOnceStrNumX, loopOnceStrNumY, loopOnceStrNumDimension);
 square(loopInfiniteX, loopInfiniteY, loopInfiniteDimension);
 triangle(loopInfiniteX1, loopInfiniteY1, loopInfiniteX2, loopInfiniteY2, loopInfiniteX3, loopInfiniteY3);
-//Note: Loop infinite button same as loop once, without text "1"
 square(loopInfiniteStrNumX, loopnfiniteStrNumY, loopnfiniteStrNumDimension);
 triangle(fastForwardX1, fastForwardY1, fastForwardX2, fastForwardY2, fastForwardX3, fastForwardY3);
 triangle(fastForwardX4, fastForwardY4, fastForwardX5, fastForwardY5, fastForwardX6, fastForwardY6);
